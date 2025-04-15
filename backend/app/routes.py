@@ -1,13 +1,15 @@
 from flask import Blueprint, request, jsonify
 from app import db
 from app.models import Contact
-from flask_cors import cross_origin  # Import cross_origin
 
 main = Blueprint('main', __name__)
 
-@main.route('/contact', methods=['POST'])
-@cross_origin(origins="https://contact-us-form-4.onrender.com")  # Allow frontend domain
+@main.route('/contact', methods=['POST', 'OPTIONS'])  # Allow OPTIONS for preflight
 def contact():
+    if request.method == 'OPTIONS':
+        # Response for preflight request
+        return jsonify({'message': 'Preflight OK'}), 200
+
     data = request.get_json()
 
     name = data.get('name')
@@ -21,4 +23,4 @@ def contact():
     db.session.add(contact)
     db.session.commit()
 
-    return jsonify({'message': 'Form submitted successfully'})
+    return jsonify({'message': 'Form submitted successfully'}), 200
