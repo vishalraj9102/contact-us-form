@@ -356,7 +356,7 @@ function ContactForm() {
     setIsLoading(true)
     setMsg('')
     try {
-      const res = await axios.post('http://localhost:5000/contact', form)
+      const res = await axios.post('https://contact-us-form-3.onrender.com/api/contact', form)
       setMsg(res.data.message)
       setForm({ name: '', email: '', message: '' })
     } catch {
