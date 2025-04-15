@@ -1,11 +1,12 @@
- 
 from flask import Blueprint, request, jsonify
 from app import db
 from app.models import Contact
+from flask_cors import cross_origin  # Import cross_origin
 
 main = Blueprint('main', __name__)
 
 @main.route('/contact', methods=['POST'])
+@cross_origin(origins="https://contact-us-form-4.onrender.com")  # Allow frontend domain
 def contact():
     data = request.get_json()
 
