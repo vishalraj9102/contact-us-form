@@ -1,1 +1,1 @@
-SQLALCHEMY_DATABASE_URI = "postgresql://postgres:root@db:5432//contact_form"
+SQLALCHEMY_DATABASE_URI = "postgresql://contact_us_1yfy_user:NhXLxKkJsn9J2dkvMkQDX4HwRgrRecW8@dpg-cvv9jhqli9vc73a0idvg-a/contact_us_1yfy"
