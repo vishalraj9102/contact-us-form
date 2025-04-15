@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+
+# Flask specific
+instance/
+*.db
+
+# PostgreSQL dump or credentials
+*.sql
+*.dump
+*.psql
+.pgdata/
+.pgpass
+
+# Environment Variables
+.env
+.env.*
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Build files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pip
+pip-log.txt
