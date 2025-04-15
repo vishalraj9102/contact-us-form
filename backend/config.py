@@ -1,1 +1,1 @@
-SQLALCHEMY_DATABASE_URI = "postgresql://postgres:root@localhost:5432/contact_form"
+SQLALCHEMY_DATABASE_URI = "postgresql://postgres:root@db:5432//contact_form"
